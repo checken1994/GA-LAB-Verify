@@ -35,7 +35,9 @@ GA LAB does **not** trust a model's self-report, a green-looking log line, or a 
 | `BLOCKED` | At least one mandatory check failed or a protected policy was violated. |
 | `UNKNOWN` | GA LAB cannot establish a required fact safely; it refuses to upgrade uncertainty to success. |
 
-## Quick start
+## Install
+
+### Python / source
 
 Requires Python 3.11+ and Git.
 
@@ -46,6 +48,21 @@ python -m pip install -e .
 ga-lab init
 ga-lab verify --repo .
 ```
+
+### GitHub Release
+
+Official versioned builds are published under [Releases](https://github.com/checken1994/GA-LAB-Verify/releases). A release includes the Python wheel/source distribution plus the SHA-bound GA LAB verification evidence for the exact release commit.
+
+### GitHub Container Package
+
+GA LAB is also published as a container package in GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/checken1994/ga-lab-verify:1.0.0
+docker run --rm ghcr.io/checken1994/ga-lab-verify:1.0.0 --help
+```
+
+The `latest` tag points to the most recently published GA LAB release. Package visibility and access follow the GitHub package settings for the owner account.
 
 Reports are written under `.ga-lab/reports/` as JSON and Markdown. The JSON report is the machine-readable authority; the Markdown file is a human-readable projection of the same run.
 
@@ -58,7 +75,7 @@ Reports are written under `.ga-lab/reports/` as JSON and Markdown. The JSON repo
 5. **Small, reversible authority** — verification observes and reports; it does not silently rewrite protected project policy.
 6. **Test integrity matters** — green results created by weakening the harness are not treated as trustworthy success.
 
-See [`docs/SCP_ORIGIN.md`](docs/SCP_ORIGIN.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), and [`SECURITY.md`](SECURITY.md).
+See [`docs/SCP_ORIGIN.md`](docs/SCP_ORIGIN.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/RELEASE.md`](docs/RELEASE.md), and [`SECURITY.md`](SECURITY.md).
 
 ## Project status
 

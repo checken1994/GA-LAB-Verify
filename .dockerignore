@@ -1,0 +1,12 @@
+.git
+.github
+.ga-lab
+.venv
+venv
+__pycache__
+*.py[cod]
+*.egg-info
+.pytest_cache
+.coverage
+build
+dist

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ga-lab-verify"
+version = "1.0.0"
+description = "Evidence-first verification gate for AI-generated code changes"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Minh Nguyen Van", email = "checken1994@gmail.com"}]
+license = {file = "LICENSE.md"}
+keywords = ["ai", "verification", "git", "ci", "code-review", "evidence"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+ga-lab = "ga_lab_verify.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/checken1994/GA-LAB-Verify"
+Issues = "https://github.com/checken1994/GA-LAB-Verify/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,18 @@
+schema_version = 1
+
+[policy]
+require_clean_worktree = true
+protected_paths = []
+forbid_test_weakening = true
+
+[[checks]]
+id = "compile"
+command = ["python", "-m", "compileall", "-q", "src"]
+mandatory = true
+timeout_seconds = 60
+
+[[checks]]
+id = "tests"
+command = ["python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+mandatory = true
+timeout_seconds = 120

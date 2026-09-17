@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "visibility": "PRIVATE",
+  "mount_into_model_workspace": false,
+  "publish_hidden_source": false,
+  "contains": ["hidden_challenges", "hidden_oracles", "mutation_manifests", "hidden_tests", "canaries"]
+}

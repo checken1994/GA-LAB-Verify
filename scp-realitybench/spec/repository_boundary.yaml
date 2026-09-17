@@ -1,0 +1,9 @@
+schema_version: 1
+public_repo: scp-realitybench
+private_repo: scp-realitybench-private
+results_repo: scp-realitybench-results
+rules:
+  scp_core_imports_realitybench: false
+  hidden_oracle_mounted_in_model_workspace: false
+  benchmark_mutates_scp_production: false
+  result_publication_requires_approval: true
